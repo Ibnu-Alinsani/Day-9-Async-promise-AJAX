@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Menu</title>
+    <link rel="stylesheet" href="assets/css/style-contact-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigasi Bar -->
+    <nav>
+        <div class="nav-right">
+            <ul>
+                <li>
+                    <a href="https://dumbways.id/">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">My Project</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="nav-left">
+            <a href="contact-menu.html">Contact Me</a>
+        </div>
+
+        <div>
+            <button class="btn-hamburger" onclick="hamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Akhir navigasi bar -->
+
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">My Project</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact-menu.html">Contact Me</a>
+    </div>
+    <!-- akhir hamburger menu -->
+
+    <!-- container -->
+    <div class="container">
+        <h1>GET IN TOUCH</h1>
+        <form id="form">
+
+            <div>
+                <label for="nama">Name <span>*</span></label>
+                <input type="text" id="nama" pattern="[A-Za-z ]+" required>
+            </div>
+            <div>
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" min="0">
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <select name="menu" id="subject">
+                    <option>Let's Talk</option>
+                    <option>Let's Collaboration</option>
+                    <option>I'am Hiring</option>
+                </select>
+            </div>
+            <div>
+                <label for="messsage">Your Message <span>*</span></label>
+                <textarea id="message" required></textarea>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="getData()">submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- akhir container -->
+
+    <script src="assets/Js/script.js"></script>
+    <script src="assets/Js/hamburger.js"></script>
+</body>
+</html>

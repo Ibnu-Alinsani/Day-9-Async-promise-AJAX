@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --bg-color: #E3E7EB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);   
+    overflow: hidden; 
+}
+
+
+/* Navbar */
+nav {
+    display: grid;
+    grid-template-columns: 3fr .7fr auto;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background-color: var(--primary-color);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .4);
+    /* z-index: 99; */
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav-right ul li img{
+    margin-top: 5px;
+}
+
+.nav-right ul li a ,
+.nav-left a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: initial;
+}
+
+.nav-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.nav-left {
+    background-color: white;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 5px 5px var(--secondary-color);
+    transition: .2s ease-in-out;
+}
+
+.nav-left a {
+    display: block;
+    color: var(--secondary-color);
+    padding: 3px 13px ;
+    transition: .2s ease-in-out;
+}
+
+.nav-left:hover {
+    box-shadow: none;
+}
+
+.nav-left a:hover {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.nav-right{
+    margin: 0 50px;
+}
+
+.nav-left {
+    /* transform: translateX(7em); */
+    justify-self: center;
+}
+
+/* Hamburger menu */
+    .btn-hamburger {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+        background-color: #D3D3D3;
+        transition: all .2s;
+    }
+
+    .hamburger-menu a {
+        display: block;
+        text-align: center;
+        color: white;
+    }
+/* akhir hamburger menu */
+/* akhir style navbar */
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center ;
+    max-width: 85%;
+    margin: 6em auto 2em;
+    padding: 2em;
+    min-height: 60vh;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.container section {
+    margin-left: 50px;
+}
+
+.container section p {
+    font-size: .9rem;
+    margin : 15px 0 30px;
+    text-align: justify;
+}
+
+.link button {
+    font-family: 'poppins';
+    width: 7em;
+    padding: 7px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: black;
+    font-size: 1rem;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+    box-shadow: 5px 5px black;
+    border: 2px solid black;
+}
+
+.link button:hover {
+    color: white;
+    background-color: black;
+    box-shadow: none;
+}
+
+/* Contact */
+.link {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.link a:nth-child(2) {
+    color: black;
+    text-decoration: none;
+}
+
+.link a img {
+    height: 1.2rem;
+    color: black;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Sosial-media */
+.sosial-media {
+    margin-top: 1em;
+}
+
+.sosial-media a {
+    text-decoration: none;
+}
+
+.icon {
+    margin: 10px 5px;
+    height: 2.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: .2s ease-in-out;
+    top: 1em;
+}
+
+.icon:hover {
+    top: -3px;
+    box-shadow: 0 18px 5px black;
+}
+
+/* card */
+figure {
+    width: 60%;
+    margin: 1.2em auto;
+    text-align: center;
+    border: transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);    
+    transition: transform .2s ease;
+}
+
+figure img {
+    width: 100%;
+}
+
+figure:hover {
+    transform: translateY(-10px);
+}
+
+figure figcaption {
+    margin-bottom: 15px;
+}
+/* akhir card */
+
+/* Responsive */
+
+/* responsive tablet/ipad */
+@media (max-width: 900px) {
+    nav {
+        grid-template-columns: 3fr 1fr auto;
+    }
+
+    .container {
+        max-width: 70%;
+        margin: 7em auto 1em;
+        display: block;
+        padding: 2em 1.5em;
+    }
+    .container section {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .container section:last-child {
+        margin-top: 50px;
+    }
+
+    .sosial-media {
+        text-align: center;
+    }
+}
+
+/* responsive handphone */
+@media (max-width: 500px) {
+    /* nav media query */
+    nav {
+        position: initial;
+        padding: 3px;
+    }
+
+    .nav-right {
+        transform: translateX(-30px);
+    }
+
+    .btn-hamburger {
+        display: block;
+        margin-left: 45px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    ul li:nth-child(2),
+    ul li:nth-child(3),
+    ul li:nth-child(4),
+    .nav-left {
+        display: none;
+    }
+
+    .hamburger-menu {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .hamburger-menu a {
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
+
+    .hamburger-menu a:last-child {
+        color: white;
+        background-color: var(--secondary-color);
+        width: 8em;
+        margin: auto;
+        border-radius: 10px;
+        padding: 8px 0;
+    }
+    /* akhir nav media query */
+
+    .container {
+        max-width: 95%;
+        margin: 1em auto 1.5em;
+        padding: 1.5em .1em;
+    }
+
+    .container .profil p {
+        text-align: left;
+    }
+
+    .link a button {
+        box-shadow: initial;
+        background-color: black;
+        color: white;
+    }
+    
+    figure {
+        width: 80%;
+    }
+}
+/* end responsive */

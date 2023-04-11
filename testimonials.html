@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="assets/css/testimonials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigasi Bar -->
+    <nav>
+        <div class="nav-right">
+            <ul>
+                <li>
+                    <a href="https://dumbways.id/">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">My Project</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="nav-left">
+            <a href="contact-menu.html">Contact Me</a>
+        </div>
+
+        <div>
+            <button class="btn-hamburger" onclick="hamburger()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Akhir navigasi bar -->
+
+    <!-- hamburger menu -->
+    <div class="hamburger-menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">My Project</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact-menu.html">Contact Me</a>
+    </div>
+    <!-- akhir hamburger menu -->
+
+    <div class="container">
+        <h1>My Testimonials</h1>
+
+        <h3>Rating By Star</h3>
+        <div class="rating-wrapping">
+            <button onclick="asyncFunction()">
+                All
+            </button>
+            <button onclick="filterTestimonial(1)">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                1
+            </button>
+            <button onclick="filterTestimonial(2)">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                2
+            </button>
+            <button onclick="filterTestimonial(3)">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                3
+            </button>
+            <button onclick="filterTestimonial(4)">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                4
+            </button>
+            <button onclick="filterTestimonial(5)">
+                <i class="fa-sharp fa-solid fa-star"></i>
+                5
+            </button>
+        </div>
+
+        <div class="card-wrapping" id="card-wrapping">
+            <div class="card">
+                <img src="assets/images/code-2.jpg" alt="">
+                <em>"Lorem ipsum dolor sit amet."</em>
+                <div class="name">
+                    <b>- Stacy</b>
+                    <b>
+                        5
+                        <i class="fa-sharp fa-solid fa-star"></i>
+                    </b>
+                </div>        
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="assets/Js/rating.js"></script> -->
+    <script src="assets/Js/ajax.js"></script>
+    <script src="assets/Js/hamburger.js"></script>
+</body>
+</html>
